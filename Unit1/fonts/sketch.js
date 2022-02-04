@@ -19,6 +19,6 @@ function draw() {
   text("happy days",0,0) ;
 
   textFont(font2) ;
-  text("Smile :)", width/2,200) ;
+  text("Smile :)", width/2,25) ;
   pop() ;
 }
