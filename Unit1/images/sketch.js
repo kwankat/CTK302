@@ -6,9 +6,9 @@ let raccoon;
 function setup() {
   createCanvas(500, 500);
 
-kieth = loadImage("images/assets/kieth.jpg");
-owo = loadImage("images/assets/owo.jpg");
-raccoon = loadImage("images/assets/raccoon.jpg")
+kieth = loadImage("assets/kieth.jpg");
+owo = loadImage("assets/owo.jpg");
+raccoon = loadImage("assets/raccoon.jpg")
 
 }
 
