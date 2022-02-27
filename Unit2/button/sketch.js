@@ -33,7 +33,5 @@ function draw() {
   pull();
 }
 
-function mouseReleased() {
-  if (mouseX > 100) && (mouseX < 200) && (mouseY > 100) && (mouseY < 200)); {
-  state = (state + 1) % 2;
+
 }
