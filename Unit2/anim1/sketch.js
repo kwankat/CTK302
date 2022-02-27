@@ -5,7 +5,7 @@ function setup() {
   createCanvas(400, 400);
   rectMode(CENTER);
   font1 = loadFont("assets/Athletic.ttf") ;
-  textSize(15);
+  textSize(35);
 }
 
 function draw() {
