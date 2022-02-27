@@ -2,7 +2,7 @@ let state = 0;
 
 function setup() {
   createCanvas(500, 500);
-  textAlign(CENTER, CENTER);
+  textAlign(CENTER, CENTER) ;
 }
 
 function draw() {
@@ -12,26 +12,29 @@ function draw() {
   switch (state) {
 
     case 0:
-      background("yellow");
+      background("yellow") ;
       text("I don't trust stairs.", 50, 100);
       break;
 
     case 1:
-      background("orange")
+    background("orange")
       text("why?", 100, 100);
       break;
 
     case 2:
-      background("yellow")
+    background("yellow")
       text("They're always up to something.", 50, 100);
       break;
+
 
   }
   push();
   fill("red");
-  rect(100, 100, 100, 100, 100);
+  rect(100,100,100,100,100);
   pull();
 }
 
-
-}
+function mouseReleased() {
+  if (mouseX > 100) && (mouseX < 200,) && (mouseY > 100) && (mouseY < 200)); {
+    state = (state + 1) % 2;
+  }

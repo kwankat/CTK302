@@ -25,12 +25,18 @@ function draw() {
     break;
 
     case :2
+    background('orange');
+    text("NICE", 200, 200)
     break;
 
     case :3
+    background('yellow');
+    text("JAMMIN", 200, 200)
     break;
 
     case :4
+    background('pink');
+    text("JAMMIN", 200, 200)
     break;
 
   }
