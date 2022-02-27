@@ -14,7 +14,7 @@ function draw() {
 //  rect(x,height/2,10,50);
 textFont(font1) ;
 push() ;
-text("yoooo", x , 200);
+text("yoooo", x , 300);
   x = x + 7 ;
   if (x> width) {
     x = 0 ;
