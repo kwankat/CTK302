@@ -8,7 +8,7 @@ function draw() {
   background("orange");
 
   push();
-  translate(x, 0);
+  translate(x, 0, [5]);
   avatar();
   x += 5;
   if (x > width) {
