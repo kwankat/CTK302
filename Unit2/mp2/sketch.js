@@ -1,0 +1,307 @@
+let state = 0;
+let timer = 0;
+let y = 0;
+let velocity = 10 ;
+
+
+function setup() {
+  createCanvas(400, 400);
+  rectMode(CENTER);
+  ellipseMode(CENTER);
+}
+
+function draw() {
+  background(33, 33, 33);
+
+  fill("grey");
+  arc(y, 75, 100, 200, PI, TWO_PI);
+fill("grey");
+arc(y, 75, 200, 200, PI, TWO_PI);
+  fill("grey");
+  arc(y, 150, 270, 250, PI, TWO_PI);
+y = y + velocity ;
+if (y > width) {
+  y = 0;
+}
+
+
+switch (state) {
+
+
+  case 0:
+noStroke();
+fill("white");
+arc(479, 200, 280, 280, PI, TWO_PI);
+fill(255);
+arc(333, 218, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(240, 230, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(100, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(300, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(400, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(500, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(600, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(300, 130, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(140, 175, 280, 280, PI, TWO_PI);
+fill(255);
+arc(200, 300, 500, 500, PI, TWO_PI);
+  fill(255);
+arc(500, 300, 500, 500, PI, TWO_PI);
+fill(232, 232, 232);
+arc(500, 300, 200, 200, PI, TWO_PI);
+fill(232, 232, 232);
+arc(600, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+arc(500, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+arc(700, 350, 200, 200, PI, TWO_PI);
+ fill(232, 232, 232);
+arc(50, 350, 200, 200, PI, TWO_PI);
+ fill(232, 232, 232);
+arc(100, 300, 200, 200, PI, TWO_PI);
+  fill('grey');
+arc(250, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+arc(300, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+arc(300, 350, 190, 190, PI, TWO_PI);
+  fill('grey');
+arc(350, 350, 190, 190, PI, TWO_PI);
+ fill('grey');
+arc(200, 350, 190, 190, PI, TWO_PI);
+ fill('black');
+arc(350, 350, 100, 100, PI, TWO_PI);
+ fill(56, 46, 39);
+arc(200, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(150, 400, 10000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(100, 400, 1000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(75, 400, 700, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(50, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(25, 400, 500, 100, PI, TWO_PI);
+    velocity = 5;
+    break;
+
+  case 1:
+noStroke();
+fill("white");
+arc(479, 200, 280, 280, PI, TWO_PI);
+fill(255);
+arc(333, 218, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(240, 230, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(100, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(300, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(400, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(500, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(600, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(300, 130, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(140, 175, 280, 280, PI, TWO_PI);
+fill(255);
+arc(200, 300, 500, 500, PI, TWO_PI);
+  fill(255);
+arc(500, 300, 500, 500, PI, TWO_PI);
+fill(232, 232, 232);
+arc(500, 300, 200, 200, PI, TWO_PI);
+fill(232, 232, 232);
+arc(600, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+arc(500, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+arc(700, 350, 200, 200, PI, TWO_PI);
+ fill(232, 232, 232);
+arc(50, 350, 200, 200, PI, TWO_PI);
+ fill(232, 232, 232);
+arc(100, 300, 200, 200, PI, TWO_PI);
+  fill('grey');
+arc(250, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+arc(300, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+arc(300, 350, 190, 190, PI, TWO_PI);
+  fill('grey');
+arc(350, 350, 190, 190, PI, TWO_PI);
+ fill('grey');
+arc(200, 350, 190, 190, PI, TWO_PI);
+ fill('black');
+arc(350, 350, 100, 100, PI, TWO_PI);
+ fill(56, 46, 39);
+arc(200, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(150, 400, 10000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(100, 400, 1000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(75, 400, 700, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(50, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(25, 400, 500, 100, PI, TWO_PI);
+    velocity = 3.5;
+    break;
+
+  case 2:
+noStroke();
+fill("white");
+arc(479, 200, 280, 280, PI, TWO_PI);
+ fill("brown");
+arc(479, 200, 280, 280, PI, TWO_PI);
+fill(255);
+arc(333, 218, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(240, 230, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(100, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(300, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(400, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(500, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(600, 250, 280, 280, PI, TWO_PI);
+fill(255);
+arc(300, 130, 280, 280, PI, TWO_PI);
+  fill(255);
+arc(140, 175, 280, 280, PI, TWO_PI);
+fill(255);
+arc(200, 300, 500, 500, PI, TWO_PI);
+  fill(255);
+arc(500, 300, 500, 500, PI, TWO_PI);
+fill(232, 232, 232);
+arc(500, 300, 200, 200, PI, TWO_PI);
+fill(232, 232, 232);
+arc(600, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+arc(500, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+arc(700, 350, 200, 200, PI, TWO_PI);
+ fill(232, 232, 232);
+arc(50, 350, 200, 200, PI, TWO_PI);
+ fill(232, 232, 232);
+arc(100, 300, 200, 200, PI, TWO_PI);
+  fill('grey');
+arc(250, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+arc(300, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+arc(300, 350, 190, 190, PI, TWO_PI);
+  fill('grey');
+arc(350, 350, 190, 190, PI, TWO_PI);
+ fill('grey');
+arc(200, 350, 190, 190, PI, TWO_PI);
+ fill('black');
+arc(350, 350, 100, 100, PI, TWO_PI);
+ fill(56, 46, 39);
+arc(200, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(150, 400, 10000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(100, 400, 1000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(75, 400, 700, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(50, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+arc(25, 400, 500, 100, PI, TWO_PI);
+    velocity = 2;
+    break;
+
+  case 3:
+  noStroke();
+  fill("white");
+  arc(479, 200, 280, 280, PI, TWO_PI);
+  fill("brown");
+  arc(479, 200, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(333, 218, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(240, 230, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(100, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(300, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(400, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(500, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(600, 250, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(300, 130, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(140, 175, 280, 280, PI, TWO_PI);
+  fill(255);
+  arc(200, 300, 500, 500, PI, TWO_PI);
+  fill(255);
+  arc(500, 300, 500, 500, PI, TWO_PI);
+  fill(232, 232, 232);
+  arc(500, 300, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+  arc(600, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+  arc(500, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+  arc(700, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+  arc(50, 350, 200, 200, PI, TWO_PI);
+  fill(232, 232, 232);
+  arc(100, 300, 200, 200, PI, TWO_PI);
+  fill('grey');
+  arc(250, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+  arc(300, 300, 190, 190, PI, TWO_PI);
+    fill('grey');
+  arc(300, 350, 190, 190, PI, TWO_PI);
+  fill('grey');
+  arc(350, 350, 190, 190, PI, TWO_PI);
+  fill('grey');
+  arc(200, 350, 190, 190, PI, TWO_PI);
+  fill('black');
+  arc(350, 350, 100, 100, PI, TWO_PI);
+  fill(56, 46, 39);
+  arc(200, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+  arc(150, 400, 10000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+  arc(100, 400, 1000, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+  arc(75, 400, 700, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+  arc(50, 400, 100, 100, PI, TWO_PI);
+   fill(56, 46, 39);
+  arc(25, 400, 500, 100, PI, TWO_PI);
+    velocity = 1;
+    break;
+  }
+
+timer = timer + 1 ;
+if (timer > 100) {
+  timer = 0;
+  state ++;
+  if (state > 3) state = 0;
+}
+
+}
+  function mouseReleased() {
+    state ++;
+    if (state > 3) state = 0;
+  }

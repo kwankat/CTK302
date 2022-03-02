@@ -1,40 +1,13 @@
-let state = 0;
-
+let button;
 function setup() {
   createCanvas(500, 500);
-  textAlign(CENTER, CENTER) ;
+  background(0);
+  button = createButton('click me');
+  button.position(200, 200);
+  button.mousePressed(changeBG);
 }
 
-function draw() {
-
-  background(100);
-
-  switch (state) {
-
-    case 0:
-      background("yellow") ;
-      text("I don't trust stairs.", 50, 100);
-      break;
-
-    case 1:
-    background("orange")
-      text("why?", 100, 100);
-      break;
-
-    case 2:
-    background("yellow")
-      text("They're always up to something.", 50, 100);
-      break;
-
-
-  }
-  push();
-  fill("red");
-  rect(100,100,100,100,100);
-  pull();
+function changeBG() {
+  let val = random(356);
+  background(val);
 }
-
-function mouseReleased() {
-  if (mouseX > 100) && (mouseX < 200,) && (mouseY > 100) && (mouseY < 200)); {
-    state = (state + 1) % 2;
-  }
