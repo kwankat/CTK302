@@ -3,7 +3,6 @@ let timer = 0;
 let y = 0;
 let velocity = 10 ;
 
-
 function setup() {
   createCanvas(400, 400);
   rectMode(CENTER);
@@ -19,6 +18,8 @@ fill("grey");
 arc(y, 75, 200, 200, PI, TWO_PI);
   fill("grey");
   arc(y, 150, 270, 250, PI, TWO_PI);
+  fill("grey");
+  arc(y, 150, 300, 300, PI, TWO_PI);
 y = y + velocity ;
 if (y > width) {
   y = 0;
