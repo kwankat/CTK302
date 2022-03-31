@@ -7,12 +7,14 @@ let maxTimer = 15 ;
 let score = 0 ;
 let kitty;
 let net;
+let grass;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
  kitty = loadImage("images/cat.png");
  net = loadImage("images/net.png");
+ grass = loadImage("image/grass.jpg")
 
   // Spawn objects
   for (let i = 0; i < maxCars; i++) {
@@ -55,7 +57,8 @@ function draw() {
 }
 
 function game() {
-  background("white");
+  image(grass, windowWidth,windowHeight);
+
 
   for (let i = 0; i < cars.length; i++) {
     cars[i].display();
