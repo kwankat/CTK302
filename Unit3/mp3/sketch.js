@@ -57,6 +57,7 @@ function draw() {
 }
 
 function game() {
+  background("green");
   image(grass, windowWidth,windowHeight);
 
 
