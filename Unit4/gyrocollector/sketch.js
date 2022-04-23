@@ -39,7 +39,7 @@ function setup() {
   noStroke();
   altImage = loadImage("assets/cars/alt1.png");
   markImage = loadImage("assets/frog/mark.png");
-  
+
 }
 
 function draw() {
@@ -152,8 +152,8 @@ function Car() {
 
 
     // maybe use an image here instead!
-      fill(this.r, this.b, this.g, this.a);
-      image(altimage, this.pos.x, this.pos.y, 75, 25);
+      fill(this.r, this.g, this.b, this.a);
+      image(this.pos.x + 17, this.pos.y - 30, 80, 60);
     }
 
     this.drive = function() {
