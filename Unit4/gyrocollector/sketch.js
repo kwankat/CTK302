@@ -5,9 +5,6 @@ var y = 0;
 var z = 0;
 var xPosition = 0;
 var yPosition = 0;
-let altImage;
-let markImage;
-let font1;
 
 // var bunnyImage;
 var cars = [];
@@ -37,14 +34,11 @@ function setup() {
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
-  altImage = loadImage("assets/cars/alt1.png");
-  markImage = loadImage("assets/frog/mark.png");
-
 }
 
 function draw() {
 
-  background('grey'); // light blue
+  background('#c6f5ff'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -60,7 +54,8 @@ function draw() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  image(markImage,0,0,500,500);
+  fill('green');
+  ellipse(0, 0, 80, 80);
   pop();
 
 
@@ -81,8 +76,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  textFont(font1) ;
-  text("DESTROY THEM!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Tasty", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -144,26 +138,27 @@ function Car() {
   this.r = random(255);
   this.g = random(255);
   this.b = random(255);
-  this.a = random(255); // alpha opacity value for fill!
+  this.a = random(255);  // alpha opacity value for fill!
 
 
   // methods
   this.display = function() {
 
-
     // maybe use an image here instead!
-      fill(this.r, this.g, this.b, this.a);
-      image(this.pos.x + 17, this.pos.y - 30, 80, 60);
-    }
+    fill(this.r, this.g, this.b, this.a);
+    ellipse(this.pos.x - 50, this.pos.y, 50, 50);
+    ellipse(this.pos.x + 50, this.pos.y, 50, 50);
+    ellipse(this.pos.x + 50, this.pos.y - 50, 50, 50) ;
+  }
 
-    this.drive = function() {
-      this.pos.add(this.vel);
+  this.drive = function() {
+    this.pos.add(this.vel);
 
-      if (this.pos.x > width) this.pos.x = 0;
-      if (this.pos.x < 0) this.pos.x = width;
-      if (this.pos.y > height) this.pos.y = 0;
-      if (this.pos.y < 0) this.pos.y = height;
-
-    }
+    if (this.pos.x > width) this.pos.x = 0;
+    if (this.pos.x < 0) this.pos.x = width;
+    if (this.pos.y > height) this.pos.y = 0;
+    if (this.pos.y < 0) this.pos.y = height;
 
   }
+
+}
