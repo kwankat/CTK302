@@ -6,7 +6,6 @@ var z = 0;
 var xPosition = 0;
 var yPosition = 0;
 let altimage = 0;
-let altimage1 = 0;
 
 // var bunnyImage;
 var cars = [];
@@ -56,7 +55,7 @@ function draw() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  image()
+  image(altimage, 0,0 500,500)
   pop();
 
 
