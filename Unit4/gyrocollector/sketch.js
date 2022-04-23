@@ -7,6 +7,8 @@ var xPosition = 0;
 var yPosition = 0;
 let altImage;
 let markImage;
+let font1;
+font1 = loadFont("assets/fonts/Athletic.ttf") ;
 
 // var bunnyImage;
 var cars = [];
@@ -16,7 +18,7 @@ var frogPos;
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-altImage = loadImage("assets/cars/alt1.png");
+
   // initialize accelerometer variables
   alpha = 0;
   beta = 0;
@@ -36,6 +38,8 @@ altImage = loadImage("assets/cars/alt1.png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
+  altImage = loadImage("assets/cars/alt1.png");
+  markImage = loadImage("assets/frog/mark.png")
 }
 
 function draw() {
@@ -56,8 +60,7 @@ function draw() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  fill('green');
-  ellipse(0, 0, 80, 80);
+  image(markImage,0,0,500,500);
   pop();
 
 
@@ -78,6 +81,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
+  textFont(font1) ;
   text("DESTROY THEM!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
@@ -140,25 +144,26 @@ function Car() {
   this.r = random(255);
   this.g = random(255);
   this.b = random(255);
-  this.a = random(255);  // alpha opacity value for fill!
+  this.a = random(255); // alpha opacity value for fill!
 
 
   // methods
   this.display = function() {
 
+
     // maybe use an image here instead!
-    image(altimage,0,0,100,10) ;
+      fill(this.r, this.b, this.g, this.o);
+      image(altimage, this.pos.x, this.pos.y, 75, 25);
+    }
+
+    this.drive = function() {
+      this.pos.add(this.vel);
+
+      if (this.pos.x > width) this.pos.x = 0;
+      if (this.pos.x < 0) this.pos.x = width;
+      if (this.pos.y > height) this.pos.y = 0;
+      if (this.pos.y < 0) this.pos.y = height;
+
+    }
 
   }
-
-  this.drive = function() {
-    this.pos.add(this.vel);
-
-    if (this.pos.x > width) this.pos.x = 0;
-    if (this.pos.x < 0) this.pos.x = width;
-    if (this.pos.y > height) this.pos.y = 0;
-    if (this.pos.y < 0) this.pos.y = height;
-
-  }
-
-}
