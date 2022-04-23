@@ -133,7 +133,7 @@ window.addEventListener('devicemotion', function(e) {
 // car class!!
 function Car() {
   // attributes
-  this.pos = createVector(100, 100);
+  this.pos = createVector(50, 50);
   this.vel = createVector(random(-5, 5), random(-5, 5));
   this.r = random(255);
   this.g = random(255);
@@ -147,8 +147,6 @@ function Car() {
     // maybe use an image here instead!
     fill(this.r, this.g, this.b, this.a);
     ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    ellipse(this.pos.x + 50, this.pos.y, 50, 50);
-    ellipse(this.pos.x + 50, this.pos.y - 50, 50, 50) ;
   }
 
   this.drive = function() {

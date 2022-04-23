@@ -5,9 +5,8 @@ let weatherID = 0; // returned in the JSON weather element
 let state = 0;
 let x = 0;
 let windspeed = 0;
-let temperature = 0;
+let temp = 0;
 let humidity = 0;
-let descripition = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -35,9 +34,8 @@ function gotData(data) {
   weather = data;
   print(weather); // for debugging purposes, print out the JSON data when we get it.
   windspeed = weather.wind.speed;
-  temperature = temperature.main.temp;
+  temp = weather.main.temp ;
   humidity = weather.main.humidity;
-  descripition = weather.weather[10]
 }
 
 function draw() {
@@ -54,11 +52,11 @@ function draw() {
       fill("black");
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
-      text("temperature is " + temperature, 20, 60);
+      text("temperature is " + temp, 20, 60);
       text("humidity is " + humidity, 20, 80);
 
       //gage
-      y = map(temperature, -10,100,5,height-10);
+      y = map(temp, -10,100,5,height-10);
       rect(width-30,height-10,10, -y) ;
 
       // cloud
