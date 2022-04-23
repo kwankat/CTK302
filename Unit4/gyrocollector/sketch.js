@@ -6,6 +6,7 @@ var z = 0;
 var xPosition = 0;
 var yPosition = 0;
 let altImage;
+let markImage;
 
 // var bunnyImage;
 var cars = [];
@@ -15,7 +16,7 @@ var frogPos;
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-altImage = loadImage("assets/alt1.png");
+altImage = loadImage("assets/cars/alt1.png");
   // initialize accelerometer variables
   alpha = 0;
   beta = 0;
@@ -78,7 +79,7 @@ function draw() {
   textSize(40);
   textAlign(CENTER);
   text("DESTROY THEM!", width / 2, 600, windowWidth - 200, windowHeight - 200);
-image(altimage,0,0,100,100) ;
+
 
   // Debugging information -- take this out when you're ready for production!
   // Just a bunch of text commands to display data coming in from addEventListeners
@@ -146,7 +147,7 @@ function Car() {
   this.display = function() {
 
     // maybe use an image here instead!
-    image(altimage,0,0,100,100) ;
+    image(altimage,0,0,100,10) ;
 
   }
 
