@@ -8,7 +8,6 @@ var yPosition = 0;
 let altImage;
 let markImage;
 let font1;
-font1 = loadFont("assets/fonts/Athletic.ttf") ;
 
 // var bunnyImage;
 var cars = [];
@@ -39,12 +38,13 @@ function setup() {
   rectMode(CENTER);
   noStroke();
   altImage = loadImage("assets/cars/alt1.png");
-  markImage = loadImage("assets/frog/mark.png")
+  markImage = loadImage("assets/frog/mark.png");
+  
 }
 
 function draw() {
 
-  background('#c6f5ff'); // light blue
+  background('grey'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -152,7 +152,7 @@ function Car() {
 
 
     // maybe use an image here instead!
-      fill(this.r, this.b, this.g, this.o);
+      fill(this.r, this.b, this.g, this.a);
       image(altimage, this.pos.x, this.pos.y, 75, 25);
     }
 
