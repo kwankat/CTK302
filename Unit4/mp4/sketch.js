@@ -62,7 +62,7 @@ function draw() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  image(mark, 0,0, 50, 50);
+  image(mark, 0, 0, 50, 50);
   pop();
 
 
@@ -85,65 +85,66 @@ function draw() {
   textAlign(CENTER);
   textFont(font1);
   text("DESTROY THEM!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+}
 
-  function deviceShaken() {
-    // re-spawn cars
-    cars = []; // clear the array first
-    for (var i = 0; i < 40; i++) {
-      cars.push(new Car());
-    }
+function deviceShaken() {
+  // re-spawn cars
+  cars = []; // clear the array first
+  for (var i = 0; i < 40; i++) {
+    cars.push(new Car());
+  }
+}
+
+
+// HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
+
+// Read in accelerometer data
+window.addEventListener('deviceorientation', function(e) {
+  alpha = e.alpha;
+  beta = e.beta;
+  gamma = e.gamma;
+});
+
+
+// accelerometer Data
+window.addEventListener('devicemotion', function(e) {
+  // get accelerometer values
+  x = e.acceleration.x;
+  y = e.acceleration.y;
+  z = e.acceleration.z;
+});
+
+
+
+
+
+// car class!!
+function Car() {
+  // attributes
+  this.pos = createVector(100, 100);
+  this.vel = createVector(random(-5, 5), random(-5, 5));
+  this.r = random(255);
+  this.g = random(255);
+  this.b = random(255);
+  this.a = random(255); // alpha opacity value for fill!
+
+
+  // methods
+  this.display = function() {
+
+
+    // maybe use an image here instead!
+    fill(this.r, this.g, this.b, this.a);
+    image(alt, this.pos.x + 17, this.pos.y - 30, 80, 60);
   }
 
+  this.drive = function() {
+    this.pos.add(this.vel);
 
-  // HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
+    if (this.pos.x > width) this.pos.x = 0;
+    if (this.pos.x < 0) this.pos.x = width;
+    if (this.pos.y > height) this.pos.y = 0;
+    if (this.pos.y < 0) this.pos.y = height;
 
-  // Read in accelerometer data
-  window.addEventListener('deviceorientation', function(e) {
-    alpha = e.alpha;
-    beta = e.beta;
-    gamma = e.gamma;
-  });
-
-
-  // accelerometer Data
-  window.addEventListener('devicemotion', function(e) {
-    // get accelerometer values
-    x = e.acceleration.x;
-    y = e.acceleration.y;
-    z = e.acceleration.z;
-  });
-
-
-
-
-
-  // car class!!
-  function Car() {
-    // attributes
-    this.pos = createVector(100, 100);
-    this.vel = createVector(random(-5, 5), random(-5, 5));
-    this.r = random(255);
-    this.g = random(255);
-    this.b = random(255);
-    this.a = random(255); // alpha opacity value for fill!
-
-
-    // methods
-    this.display = function() {
-
-
-      // maybe use an image here instead!
-      fill(this.r, this.g, this.b, this.a);
-      image(this.pos.x + 17, this.pos.y - 30, 80, 60);
-    }
-
-    this.drive = function() {
-      this.pos.add(this.vel);
-
-      if (this.pos.x > width) this.pos.x = 0;
-      if (this.pos.x < 0) this.pos.x = width;
-      if (this.pos.y > height) this.pos.y = 0;
-      if (this.pos.y < 0) this.pos.y = height;
-
-    }
+  }
 }
