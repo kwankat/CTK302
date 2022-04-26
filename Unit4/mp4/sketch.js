@@ -47,7 +47,7 @@ function setup() {
 function draw() {
 
   background('grey'); // light blue
-
+  //image
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
@@ -62,7 +62,7 @@ function draw() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  image(mark,frogPos.x, frogPos.y, 50, 50);
+  image(mark, 0,0, 50, 50);
   pop();
 
 
@@ -83,77 +83,56 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  textFont(font1) ;
+  textFont(font1);
   text("DESTROY THEM!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
-
-  // Debugging information -- take this out when you're ready for production!
-  // Just a bunch of text commands to display data coming in from addEventListeners
-  textAlign(LEFT);
-  textSize(20);
-  fill('black');
-  text("orientation data:", 25, 25);
-  textSize(15);
-  text("alpha: " + alpha, 25, 50);
-  text("beta: " + beta, 25, 70);
-  text("gamma: " + gamma, 25, 90);
-  textSize(20);
-  text("acceleration data:", 25, 125);
-  textSize(15);
-  text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
-  text("y = " + y, 25, 170);
-  text("z = " + z, 25, 190);
-
-
-}
-
-function deviceShaken() {
-  // re-spawn cars
-  cars = []; // clear the array first
-  for (var i = 0; i < 40; i++) {
-    cars.push(new Car());
+  function deviceShaken() {
+    // re-spawn cars
+    cars = []; // clear the array first
+    for (var i = 0; i < 40; i++) {
+      cars.push(new Car());
+    }
   }
-}
 
 
-// HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
+  // HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
 
-// Read in accelerometer data
-window.addEventListener('deviceorientation', function(e) {
-  alpha = e.alpha;
-  beta = e.beta;
-  gamma = e.gamma;
-});
-
-
-// accelerometer Data
-window.addEventListener('devicemotion', function(e) {
-  // get accelerometer values
-  x = e.acceleration.x;
-  y = e.acceleration.y;
-  z = e.acceleration.z;
-});
+  // Read in accelerometer data
+  window.addEventListener('deviceorientation', function(e) {
+    alpha = e.alpha;
+    beta = e.beta;
+    gamma = e.gamma;
+  });
 
 
+  // accelerometer Data
+  window.addEventListener('devicemotion', function(e) {
+    // get accelerometer values
+    x = e.acceleration.x;
+    y = e.acceleration.y;
+    z = e.acceleration.z;
+  });
 
 
 
-// car class!!
-function Car() {
-  // attributes
-  this.pos = createVector(100, 100);
-  this.vel = createVector(random(-5, 5), random(-5, 5));
-  this.r = random(255);
-  this.g = random(255);
-  this.b = random(255);
-  this.a = random(255); // alpha opacity value for fill!
 
 
-  // methods
-  this.display = function() {
+  // car class!!
+  function Car() {
+    // attributes
+    this.pos = createVector(100, 100);
+    this.vel = createVector(random(-5, 5), random(-5, 5));
+    this.r = random(255);
+    this.g = random(255);
+    this.b = random(255);
+    this.a = random(255); // alpha opacity value for fill!
 
 
-    // maybe use an image here instead!
+    // methods
+    this.display = function() {
+
+
+      // maybe use an image here instead!
       fill(this.r, this.g, this.b, this.a);
       image(this.pos.x + 17, this.pos.y - 30, 80, 60);
     }
