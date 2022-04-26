@@ -138,7 +138,7 @@ function Car() {
   this.r = random(255);
   this.g = random(255);
   this.b = random(255);
-  this.a = random(255);  // alpha opacity value for fill!
+  this.a = random(255); // alpha opacity value for fill!
 
 
   // methods

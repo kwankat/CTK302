@@ -34,8 +34,9 @@ function setup() {
 
   // load any images you need
   //bunnyImage = loadImage("assets/bunny.jpg");
-  alt = loadImage("assets/cars/alt1.png");
-  mark = loadImage("assets/frog/mark.png");
+  alt = loadImage("cars/alt1.png");
+  mark = loadImage("frog/mark.png");
+  font1 = loadFont("fonts/Athletic.ttf")
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();

@@ -20,9 +20,9 @@ function setup() {
   // substitute zip=61820 for q=Normal,IL,US
 
 
- // let myIDString = "appid=xxxxx"; // put your ID instead of xxxxx
+  // let myIDString = "appid=xxxxx"; // put your ID instead of xxxxx
 
-  let myIDString = "appid=2ab3fd961cc8c4aacb1786ddb79e8da5" ;
+  let myIDString = "appid=2ab3fd961cc8c4aacb1786ddb79e8da5";
 
   let myTotalString = myCityString + myIDString;
 
@@ -34,7 +34,7 @@ function gotData(data) {
   weather = data;
   print(weather); // for debugging purposes, print out the JSON data when we get it.
   windspeed = weather.wind.speed;
-  temp = weather.main.temp ;
+  temp = weather.main.temp;
   humidity = weather.main.humidity;
 }
 
@@ -56,8 +56,8 @@ function draw() {
       text("humidity is " + humidity, 20, 80);
 
       //gage
-      y = map(temp, -10,100,5,height-10);
-      rect(width-30,height-10,10, -y) ;
+      y = map(temp, -10, 100, 5, height - 10);
+      rect(width - 30, height - 10, 10, -y);
 
       // cloud
       fill("white");
