@@ -8,6 +8,7 @@ var yPosition = 0;
 let alt;
 let mark;
 let font1;
+let glitch;
 
 // var bunnyImage;
 var cars = [];
@@ -37,6 +38,7 @@ function setup() {
   alt = loadImage("cars/alt1.png");
   mark = loadImage("frog/mark.png");
   font1 = loadFont("fonts/Athletic.ttf")
+  glitch = loadImage("background/glitch.jpg")
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -47,7 +49,6 @@ function setup() {
 function draw() {
 
   background('grey'); // light blue
-  //image
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
