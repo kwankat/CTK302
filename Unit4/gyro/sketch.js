@@ -57,7 +57,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(300);
+  textSize(200);
   textAlign(CENTER);
   text("JUMPSCARE", width / 2, height / 2);
 
